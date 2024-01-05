@@ -68,6 +68,7 @@ export const WeatherApp = () => {
             ref={city}
             type="text"
             placeholder="Search..."
+            required
             className="flex w-80 h-16  border-none rounded-md outline-none text-gray-500 pl-6 "
           />
           <button>
