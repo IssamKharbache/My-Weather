@@ -49,47 +49,49 @@ export const WeatherApp = () => {
   };
 
   return (
-    <div className="">
+    <div className="flex items-center justify-center">
       <div className=" w-full  h-screen mx-auto  ">
         <h1 className="text-6xl py-4 ml-5 flex justify-center items-center md:justify-start  font-Rubik text-white">
           My weather
         </h1>
 
-        <div className="flex justify-center gap-12 m-7 md:m-0 ">
+        <div className="flex flex-col justify-center items-center gap-12 mt-[100px] md:m-0 ">
           {error ? (
-            <span className="absolute bg-red-700 rounded-lg text-white py-2 px-2 top-[25%] md:top-[20%] left-[20%] md:left-[39%]">
-              Cannot found city name , try again{" "}
+            <span className=" bg-red-700 rounded-lg text-white py-1 px-2 mr-24">
+              Cannot found city name , try again
             </span>
           ) : (
             ""
           )}
+          <div className="flex gap-8">
+            <input
+              ref={city}
+              type="text"
+              placeholder="Search..."
+              required
+              className="flex w-80 h-16  border-none rounded-md outline-none text-gray-500 pl-6 "
+            />
 
-          <input
-            ref={city}
-            type="text"
-            placeholder="Search..."
-            required
-            className="flex w-80 h-16  border-none rounded-md outline-none text-gray-500 pl-6 "
-          />
-          <button>
-            {loading ? (
-              <Vortex
-                visible={true}
-                height="40"
-                width="40"
-                ariaLabel="vortex-loading"
-                wrapperStyle={{}}
-                wrapperClass="vortex-wrapper"
-                colors={["red", "blue", "green", "yellow", "green"]}
-              />
-            ) : (
-              <IoIosSearch
-                onClick={search}
-                size={40}
-                className=" mt-3  text-white rounded-full hover:text-yellow-400 cursor-pointer"
-              />
-            )}
-          </button>
+            <button>
+              {loading ? (
+                <Vortex
+                  visible={true}
+                  height="40"
+                  width="40"
+                  ariaLabel="vortex-loading"
+                  wrapperStyle={{}}
+                  wrapperClass="vortex-wrapper"
+                  colors={["red", "blue", "green", "yellow", "green"]}
+                />
+              ) : (
+                <IoIosSearch
+                  onClick={search}
+                  size={40}
+                  className=" mt-3  text-white rounded-full hover:text-yellow-400 cursor-pointer"
+                />
+              )}
+            </button>
+          </div>
         </div>
 
         {fetchedData ? (
@@ -151,7 +153,7 @@ export const WeatherApp = () => {
             </div>
           </div>
         ) : (
-          <div className="flex justify-center items-start text-4xl text-gray-300 pt-24">
+          <div className="flex justify-center items-start text-2xl md:text-4xl text-gray-300 pt-24 ">
             Search your city name on top to see the weather
           </div>
         )}
