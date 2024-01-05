@@ -49,15 +49,15 @@ export const WeatherApp = () => {
   };
 
   return (
-    <div className="flex items-center justify-center">
-      <div className=" w-full  h-screen mx-auto  ">
+    <div className="flex items-center justify-center ">
+      <div className=" w-full  h-screen mx-auto ">
         <h1 className="text-3xl md:text-7xl py-4 ml-5 flex justify-center items-center md:justify-start  font-Rubik text-white">
           My weather
         </h1>
 
-        <div className="flex flex-col justify-center items-center gap-12 mt-[100px] md:m-0 ">
+        <div className="flex flex-col justify-center items-center gap-12 mt-[60px] md:mt-[80px] md:m-0 ">
           {error ? (
-            <span className=" bg-red-700 rounded-lg text-white py-1 px-2 mr-24">
+            <span className=" bg-red-700 rounded-lg text-white py-1 px-2 mr-10">
               Cannot found city name , try again
             </span>
           ) : (
@@ -94,7 +94,7 @@ export const WeatherApp = () => {
         </div>
 
         {fetchedData ? (
-          <div className="flex gap-14 flex-col">
+          <div className="flex gap-8 flex-col">
             <div className="w-[100px] h-[100px] md:h-[200px] md:w-[200px] ml-[33%] md:ml-[43%] pt-2  flex">
               <img
                 src={
