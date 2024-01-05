@@ -63,7 +63,7 @@ export const WeatherApp = () => {
           ) : (
             ""
           )}
-          <div className="flex gap-8">
+          <div className="flex gap-4 md:gap-8">
             <input
               ref={city}
               type="text"
