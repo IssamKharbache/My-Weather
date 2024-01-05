@@ -95,7 +95,7 @@ export const WeatherApp = () => {
 
         {fetchedData ? (
           <div className="flex gap-14 flex-col">
-            <div className="w-[200px] h-[200px] ml-[33%] md:ml-[43%] pt-2  flex">
+            <div className="w-[100px] h-[100px] md:h-[200px] md:w-[200px] ml-[33%] md:ml-[43%] pt-2  flex">
               <img
                 src={
                   condition === "Partly cloudy"
