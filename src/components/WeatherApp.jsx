@@ -69,7 +69,7 @@ export const WeatherApp = () => {
               type="text"
               placeholder="Search..."
               required
-              className="flex w-80 h-16  border-none rounded-md outline-none text-gray-500 pl-6 "
+              className="flex w-60 h-14 md:h-20 md:w-80  border-none mr-8 rounded-md outline-none text-gray-500 pl-6 "
             />
 
             <button>
@@ -86,8 +86,7 @@ export const WeatherApp = () => {
               ) : (
                 <IoIosSearch
                   onClick={search}
-                  size={40}
-                  className=" mt-3  text-white rounded-full hover:text-yellow-400 cursor-pointer"
+                  className=" mt-3 text-2xl md:text-4xl text-white rounded-full hover:text-yellow-400 cursor-pointer"
                 />
               )}
             </button>
