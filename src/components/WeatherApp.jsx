@@ -51,7 +51,7 @@ export const WeatherApp = () => {
   return (
     <div className="flex items-center justify-center">
       <div className=" w-full  h-screen mx-auto  ">
-        <h1 className="text-6xl py-4 ml-5 flex justify-center items-center md:justify-start  font-Rubik text-white">
+        <h1 className="text-3xl md:text-7xl py-4 ml-5 flex justify-center items-center md:justify-start  font-Rubik text-white">
           My weather
         </h1>
 
