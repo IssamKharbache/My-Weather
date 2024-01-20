@@ -152,8 +152,8 @@ export const WeatherApp = () => {
             </div>
           </div>
         ) : (
-          <div className="flex justify-center items-start text-2xl md:text-4xl text-gray-300 pt-24 ">
-            Search your city name on top to see the weather
+          <div className="flex justify-center items-start text-1xl px-10 md:text-4xl text-gray-300 pt-24 ">
+            Search your city name on top
           </div>
         )}
       </div>
